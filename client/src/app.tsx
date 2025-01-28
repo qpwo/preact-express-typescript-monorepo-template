@@ -1,6 +1,6 @@
 import toast, { Toaster } from 'react-hot-toast'
 import { Response, Routes, square } from 'shared'
-import { useState } from 'preact/hooks'
+import { useState, useEffect } from 'preact/hooks'
 import './app.css'
 
 const x = 5
@@ -10,9 +10,17 @@ export function App() {
   const [number, setNumber] = useState('')
   const [x, setX] = useState('')
   const [y, setY] = useState('')
+  const [serverStatus, setServerStatus] = useState<string>('checking...')
+
+  useEffect(() => {
+    callApi('health', {})
+      .then(() => setServerStatus('connected'))
+      .catch(() => setServerStatus('disconnected'))
+  }, [])
 
   return <>
     <Toaster />
+    <div>Server Status: {serverStatus}</div>
     <div>
       <h3>Square Root</h3>
       <input type="number" value={number} onChange={e => setNumber(e.currentTarget.value)} placeholder="Enter number" />
@@ -46,6 +54,7 @@ async function callApi<T extends keyof Routes>(route: T, data: Parameters<Routes
     return result.data
   } else {
     toast.error(result.message)
+    console.error('error trying to call api', { route, data, result })
     throw new Error(result.message)
   }
 }

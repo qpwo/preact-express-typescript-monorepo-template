@@ -13,15 +13,19 @@ const plus: Routes['plus'] = async function plus({ x, y }) {
   return { total: x + y }
 }
 
-
 const throwsError: Routes['throwsError'] = async function throwsError({ message }) {
   throw new Error(message)
+}
+
+const health: Routes['health'] = async function health() {
+  return { status: 'ok' }
 }
 
 const routeHandlers: Routes = {
   squareRoot,
   plus,
   throwsError,
+  health,
 }
 
 const routeWrapper = <T extends keyof Routes>(handler: Routes[T], name: T) => {

@@ -8,6 +8,7 @@ export const Routes = {
   squareRoot: [o({ x: n() }), o({ sqrt: n() })],
   plus: [o({ x: n(), y: n() }), o({ total: n() })],
   throwsError: [o({ message: s() }), o({ never: s() })],
+  health: [o({}), o({ status: s() })],
 } as const
 
 export type Response<T> =
