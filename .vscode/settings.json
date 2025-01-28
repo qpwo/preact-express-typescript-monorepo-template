@@ -1,0 +1,5 @@
+{
+    "prettier.prettierPath": "node_modules/prettier-no-jsx-parens",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

@@ -2,8 +2,8 @@
   "compilerOptions": {
     "target": "es2018",
     // "module": "commonjs",
-    "module": "ESNext",  // Change this from commonjs to ESNext
-    "moduleResolution": "bundler",  // Add this
+    "module": "ESNext", // Change this from commonjs to ESNext
+    "moduleResolution": "bundler", // Add this
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -11,8 +11,14 @@
   },
   "files": [],
   "references": [
-    { "path": "./ui" },
-    { "path": "./server" },
-    { "path": "./shared" }
+    {
+      "path": "./client"
+    },
+    {
+      "path": "./server"
+    },
+    {
+      "path": "./shared"
+    }
   ]
 }
