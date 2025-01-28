@@ -1,0 +1,19 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "My project using pnpm workspaces",
+  "private": true,
+  "workspaces": [
+    "ui",
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test"
+  },
+  "dependencies": {
+    "prettier-no-jsx-parens": "^3.4.0",
+    "typescript": "5.7.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "Shared code package",
+  "main": "dist/shared.js",
+  "types": "dist/shared.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified for shared\" && exit 1"
+  }
+}
