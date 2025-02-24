@@ -1,12 +1,27 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
+    "target": "es2024",
+    "lib": [
+      "es2024"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": ".",
     "declaration": true,
     "declarationMap": true,
     "composite": true
   },
-  "include": ["src"],
-
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

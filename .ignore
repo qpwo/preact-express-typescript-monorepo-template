@@ -1,0 +1,11 @@
+node_modules
+# pnpm-lock.yaml
+.env
+fancy_log.jsonl
+temp.js
+*.log
+*.egg-info
+
+*/dist
+*.tsbuildinfo
+.git

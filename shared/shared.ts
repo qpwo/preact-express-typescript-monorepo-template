@@ -13,13 +13,13 @@ export const Routes = {
 
 export type Response<T> =
   | {
-    ok: true
-    data: T
-  }
+      ok: true
+      data: T
+    }
   | {
-    ok: false
-    message: string
-  }
+      ok: false
+      message: string
+    }
 
 export type Routes = {
   [K in keyof typeof Routes]: (_: z.infer<(typeof Routes)[K][0]>) => Promise<z.infer<(typeof Routes)[K][1]>>

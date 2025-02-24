@@ -1,9 +1,29 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
+    "target": "es2024",
+    "lib": [
+      "es2024"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "."
   },
-  "include": ["src"],
-  "references": [{ "path": "../shared" }]
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "../shared"
+    }
+  ]
 }

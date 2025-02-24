@@ -1,5 +1,42 @@
 {
-    "prettier.prettierPath": "node_modules/prettier-no-jsx-parens",
-    "editor.formatOnSave": true,
+  "prettier.prettierPath": "node_modules/prettier-no-jsx-parens",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?-",
+  // no dash:
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "prettier.ignorePath": "./.prettierignore",
+  "black-formatter.args": ["--line-length=140"],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "workbench.colorCustomizations": {
+    "/home/l/tmp/mytheme.jsonc": {},
+    "activityBar.background": "#752173",
+    "titleBar.activeBackground": "#752173",
+    "titleBar.activeForeground": "#FEFCFB",
+    "statusBar.background": "#752173",
+    "statusBar.foreground": "#FEFCFB"
+  },
+  "[caddyfile]": {
+    "editor.defaultFormatter": "matthewpi.caddyfile-support"
+  }
 }

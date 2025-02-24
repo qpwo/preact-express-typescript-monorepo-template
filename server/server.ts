@@ -33,7 +33,7 @@ const routeWrapper = <T extends keyof Routes>(handler: Routes[T], name: T) => {
     try {
       const validInput = (Routes as any)[name][0].parse(req.body)
       const output = await handler(validInput)
-        ; (Routes as any)[name][1].parse(output)
+      ;(Routes as any)[name][1].parse(output)
       res.json({ ok: true, data: output } satisfies Response<typeof output>)
     } catch (err: any) {
       res.json({ ok: false, message: err.message } satisfies Response<never>)

@@ -50,7 +50,7 @@ async function callApi<T extends keyof Routes>(route: T, data: Parameters<Routes
   const result: Response<ReturnType<Routes[T]>> = await response.json()
 
   if (result.ok) {
-    toast.success('Success!')
+    toast.success(JSON.stringify(result.data))
     return result.data
   } else {
     toast.error(result.message)

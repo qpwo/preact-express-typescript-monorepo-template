@@ -10,8 +10,9 @@
   ],
   "scripts": {
     "fmt": "prettier-no-jsx-parens -w .",
-    "build": "pnpm -r run build",
-    "test": "pnpm -r run test"
+    "build": "tsc -b .; pnpm -r run build",
+    "killdev": "pkill -ife tsc; pkill -ife vite; pkill -ife nodemon; pkill -ife server.ts",
+    "psql": ". server/.env && psql postgresql://$PGUSER:$PGPASSWORD@localhost/$PGDATABASE"
   },
   "dependencies": {
     "prettier-no-jsx-parens": "^3.4.0",
