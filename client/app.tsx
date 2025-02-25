@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { create } from 'zustand'
 
 const x = 5
+// const x: string = 5
 console.log({ x, xSquared: square(x) })
 
 interface State {

@@ -4,6 +4,9 @@ import { z } from 'zod'
 import { DB, sql } from './not-slonik'
 import type { Pool } from 'pg'
 
+// const _y: string = 5
+const _x: FooBar = ['foo', 42]
+
 async function doThing(db: DB) {
   const ret = await db.rows(sql`SELECT 1+1 AS x`, z.any())
   console.log('ret:', ret)

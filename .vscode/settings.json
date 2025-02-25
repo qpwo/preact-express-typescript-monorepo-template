@@ -24,7 +24,9 @@
   // no dash:
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   "prettier.ignorePath": "./.prettierignore",
-  "black-formatter.args": ["--line-length=140"],
+  "black-formatter.args": [
+    "--line-length=140"
+  ],
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
@@ -38,5 +40,8 @@
   },
   "[caddyfile]": {
     "editor.defaultFormatter": "matthewpi.caddyfile-support"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
