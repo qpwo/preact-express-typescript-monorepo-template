@@ -1,7 +1,7 @@
 import './index.css'
 import { App } from './app.tsx'
+import { render } from 'react'
 
-import { render } from 'preact'
 render(<App />, document.getElementById('app')!)
 // import { hydrate, prerender as ssr } from 'preact-iso'
 // if (typeof window !== 'undefined') {

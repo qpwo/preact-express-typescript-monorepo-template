@@ -1,7 +1,7 @@
+import './app.css'
 import toast, { Toaster } from 'react-hot-toast'
 import { Response, Routes, square } from 'shared'
-import { useState, useEffect } from 'preact/hooks'
-import './app.css'
+import { useState, useEffect } from 'react'
 
 const x = 5
 console.log({ x, xSquared: square(x) })
