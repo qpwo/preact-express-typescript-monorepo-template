@@ -1,12 +1,12 @@
 {
-  "name": "server",
+  "name": "api",
   "version": "1.0.0",
   "description": "Server package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "esr server.ts",
-    "watch": "nodemon --watch '**/*' -e ts,json --exec 'esr server.ts'",
+    "start": "esr api.ts",
+    "watch": "nodemon --watch '**/*' -e ts,json --exec 'esr api.ts'",
     "build": "tsc -b"
   },
   "dependencies": {

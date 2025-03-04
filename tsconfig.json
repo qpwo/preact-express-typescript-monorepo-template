@@ -2,10 +2,10 @@
   "files": [],
   "references": [
     {
-      "path": "./client"
+      "path": "./ui"
     },
     {
-      "path": "./server"
+      "path": "./api"
     },
     {
       "path": "./shared"

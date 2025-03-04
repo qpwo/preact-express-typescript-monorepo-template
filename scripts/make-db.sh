@@ -1,5 +1,5 @@
 set -xeo pipefail
-source server/.env
+source api/.env
 echo PGUSER=$PGUSER PGPASSWORD=$PGPASSWORD PGDATABASE=$PGDATABASE
 
 # Drop database if it exists
@@ -18,4 +18,4 @@ sudo -u postgres psql -d $PGDATABASE -c "GRANT ALL PRIVILEGES ON ALL SEQUENCES I
 sudo -u postgres psql -d $PGDATABASE -c "GRANT CREATE ON SCHEMA public TO $PGUSER;"
 
 # test:
-. server/.env && psql postgresql://$PGUSER:$PGPASSWORD@localhost/$PGDATABASE -c "SELECT 1;"
+. api/.env && psql postgresql://$PGUSER:$PGPASSWORD@localhost/$PGDATABASE -c "SELECT 1;"

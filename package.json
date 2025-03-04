@@ -4,15 +4,15 @@
   "description": "My project using pnpm workspaces",
   "private": true,
   "workspaces": [
-    "client",
-    "server",
+    "ui",
+    "api",
     "shared"
   ],
   "scripts": {
     "fmt": "prettier-no-jsx-parens -w .",
     "build": "tsc -b .; pnpm -r run build",
-    "killdev": "pkill -ife tsc; pkill -ife vite; pkill -ife nodemon; pkill -ife server.ts",
-    "psql": ". server/.env && psql postgresql://$PGUSER:$PGPASSWORD@localhost/$PGDATABASE"
+    "killdev": "pkill -ife tsc; pkill -ife vite; pkill -ife nodemon; pkill -ife api.ts",
+    "psql": ". api/.env && psql postgresql://$PGUSER:$PGPASSWORD@localhost/$PGDATABASE"
   },
   "dependencies": {
     "prettier-no-jsx-parens": "^3.4.0",

@@ -13,12 +13,12 @@
       }
     },
     {
-      "label": "client-dev",
+      "label": "ui-dev",
       "type": "shell",
       "command": "pnpm",
       "args": ["run", "dev"],
       "options": {
-        "cwd": "${workspaceFolder}/client"
+        "cwd": "${workspaceFolder}/ui"
       },
       "isBackground": true,
       "problemMatcher": [],
@@ -27,12 +27,12 @@
       }
     },
     {
-      "label": "server-watch",
+      "label": "api-watch",
       "type": "shell",
       "command": "pnpm",
       "args": ["run", "watch"],
       "options": {
-        "cwd": "${workspaceFolder}/server"
+        "cwd": "${workspaceFolder}/api"
       },
       "isBackground": true,
       "problemMatcher": [],
@@ -42,7 +42,7 @@
     },
     {
       "label": "Start Development",
-      "dependsOn": ["tsc-watch", "client-dev", "server-watch"],
+      "dependsOn": ["tsc-watch", "ui-dev", "api-watch"],
       "problemMatcher": [],
       "group": {
         "kind": "build",
